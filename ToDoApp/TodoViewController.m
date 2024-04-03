@@ -156,7 +156,7 @@
     } else {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS[cd] %@", searchText];
         NSArray *filteredTasks = [_toDoListArr filteredArrayUsingPredicate:predicate];
-        
+    
         _toDoListArr = [NSMutableArray arrayWithArray:filteredTasks];
     }
     
