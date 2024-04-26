@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *toDoTable;
 @property (weak, nonatomic) IBOutlet UISearchBar *mySearchBar;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *piroritySegment;
+@property (weak, nonatomic) IBOutlet UIImageView *placeholdeImage;
 
 @end
 
@@ -49,7 +50,8 @@
     [super viewDidLoad];
     self.toDoTable.delegate = self;
     self.toDoTable.dataSource = self;
- 
+    _placeholdeImage.hidden = YES;
+
     
       NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
       NSArray *existingTasks = [[defaults objectForKey:@"TasksArray"]mutableCopy];
@@ -60,9 +62,23 @@
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"state == %@", @(0)];
     _toDoListArr = [[allTasks filteredArrayUsingPredicate:predicate] mutableCopy];
-    
+    if (_toDoListArr.count == 0 ){
+        _placeholdeImage.hidden = NO;
+    }else{
+        _placeholdeImage.hidden = YES;
+
+    }
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    if (_toDoListArr.count == 0 ){
+        _placeholdeImage.hidden = NO;
+    }else{
+        _placeholdeImage.hidden = YES;
+
+    }
+}
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _toDoListArr.count;

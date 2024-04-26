@@ -9,6 +9,7 @@
 #import "DetailsViewController.h"
 
 @interface DoneViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *doneImage;
 @property (weak, nonatomic) IBOutlet UITableView *doneTable;
 
 @end
@@ -47,10 +48,15 @@
     self.doneTable.delegate = self;
     self.doneTable.dataSource = self;
     
-    
+    self.doneImage.hidden = YES;
       NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
       NSArray *existingTasks = [[defaults objectForKey:@"DoneArray"]mutableCopy];
       _doneListArr = existingTasks ? [existingTasks mutableCopy]:[NSMutableArray array];
+    
+    if (_doneListArr.count == 0) {
+        self.doneImage.hidden = NO;
+
+    }
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

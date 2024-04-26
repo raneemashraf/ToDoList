@@ -11,6 +11,7 @@
 
 @interface InProgressViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *inProgressTable;
+@property (weak, nonatomic) IBOutlet UIImageView *progressImage;
 - (IBAction)piriortySeg:(id)sender;
 
 @end
@@ -21,14 +22,19 @@
     [super viewDidLoad];
     self.inProgressTable.delegate = self;
     self.inProgressTable.dataSource = self;
-        
+    self.progressImage.hidden = YES;
         // Retrieve the existing task array from UserDefaults or create a new one
           NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
           NSArray *existingTasks = [[defaults objectForKey:@"ProgressArray"]mutableCopy];
      NSPredicate *predicate = [NSPredicate predicateWithFormat:@"state == %@", @(1)];
           _inProgressListArr = existingTasks ? [existingTasks mutableCopy]:[NSMutableArray array];
-        
+    if (_inProgressListArr.count == 0) {
+        self.progressImage.hidden = NO;
+    }else{
+        self.progressImage.hidden = YES;
+
     }
+}
 
 
     - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

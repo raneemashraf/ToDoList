@@ -24,12 +24,12 @@
                                 <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="pVm-KH-tsc">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.27541334229999997" green="0.36244713960000002" blue="0.28138730960000002" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                     <segments>
                                         <segment title="High"/>
                                         <segment title="Medium"/>
                                         <segment title="Low"/>
                                     </segments>
+                                    <color key="selectedSegmentTintColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <action selector="piroritySeg:" destination="lgQ-Oy-CUN" eventType="valueChanged" id="rN8-Fd-7nv"/>
                                     </connections>
@@ -58,18 +58,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="to-do-list" translatesAutoresizingMaskIntoConstraints="NO" id="dKP-0g-ao7">
+                                <rect key="frame" x="55" y="277" width="259" height="315"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lr4-CB-0a7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Done" image="figure.australian.football" catalog="system" id="NkS-p0-jKg"/>
                     <connections>
+                        <outlet property="doneImage" destination="dKP-0g-ao7" id="5X6-HM-CNw"/>
                         <outlet property="doneTable" destination="ifl-LR-Ibz" id="IlL-u6-LVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFv-Sw-tzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="740"/>
+            <point key="canvasLocation" x="1006.8702290076335" y="739.43661971830988"/>
         </scene>
         <!--In Progress-->
         <scene sceneID="Pha-Hi-lCH">
@@ -86,12 +91,12 @@
                                 <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Ubh-Ab-gKn">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.27541334229999997" green="0.36244713960000002" blue="0.28138730960000002" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                     <segments>
                                         <segment title="High"/>
                                         <segment title="Medium"/>
                                         <segment title="Low"/>
                                     </segments>
+                                    <color key="selectedSegmentTintColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <action selector="piriortySeg:" destination="Emi-nn-IKg" eventType="valueChanged" id="3Ly-We-iJd"/>
                                     </connections>
@@ -120,6 +125,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="work-in-progress (2)" translatesAutoresizingMaskIntoConstraints="NO" id="Dg3-aZ-2lW">
+                                <rect key="frame" x="88" y="287" width="233" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LfQ-zS-MHY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,11 +138,12 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="inProgressTable" destination="6eL-Sf-h5I" id="2oY-ao-cse"/>
+                        <outlet property="progressImage" destination="Dg3-aZ-2lW" id="TNz-6x-P7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCU-Mg-nKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="344"/>
+            <point key="canvasLocation" x="2159.5419847328244" y="343.66197183098592"/>
         </scene>
         <!--To Do-->
         <scene sceneID="CKQ-Bx-rOR">
@@ -154,7 +164,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdN-de-067">
                                 <rect key="frame" x="339" y="99" width="54" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.27541334229999997" green="0.36244713960000002" blue="0.28138730960000002" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.24040097092854504" green="0.60980902777777779" blue="0.50832800475054596" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="plus.app.fill" catalog="system" symbolScale="large"/>
@@ -170,12 +180,12 @@
                                 <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="MhR-Dm-7dz">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.27541334229999997" green="0.36244713960000002" blue="0.28138730960000002" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                     <segments>
                                         <segment title="High"/>
                                         <segment title="Medium"/>
                                         <segment title="Low"/>
                                     </segments>
+                                    <color key="selectedSegmentTintColor" red="0.03995786623" green="0.5" blue="0.43717735169999999" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <action selector="pirorityAction:" destination="rHn-e5-3yX" eventType="valueChanged" id="YfQ-2C-hfm"/>
                                     </connections>
@@ -204,6 +214,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-task" translatesAutoresizingMaskIntoConstraints="NO" id="JdD-Oi-yDF">
+                                <rect key="frame" x="94" y="297" width="248" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sfb-uf-E8X"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,10 +225,13 @@
                     <tabBarItem key="tabBarItem" title="To Do" image="figure.walk" catalog="system" id="hk6-um-4WO">
                         <color key="badgeColor" white="0.66000000000000003" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="PZ8-e6-jgw"/>
+                    <navigationItem key="navigationItem" title="To Do" prompt="Todo" id="PZ8-e6-jgw">
+                        <barButtonItem key="backBarButtonItem" title="Todo" id="KUt-yX-ttl"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mySearchBar" destination="dub-Zd-TL8" id="3tU-DR-h0c"/>
                         <outlet property="piroritySegment" destination="MhR-Dm-7dz" id="djH-b1-aqV"/>
+                        <outlet property="placeholdeImage" destination="JdD-Oi-yDF" id="NfK-0I-7AG"/>
                         <outlet property="toDoTable" destination="cHP-qh-LeK" id="8Pz-rf-DIz"/>
                     </connections>
                 </viewController>
@@ -261,7 +278,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add">
-                                    <color key="baseBackgroundColor" red="0.36976768240000002" green="0.48661854110000002" blue="0.37778828180000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addBtn:" destination="Vyf-2Z-MZe" eventType="touchUpInside" id="KNS-Nh-RWM"/>
@@ -275,6 +292,7 @@
                                     <segment title="Medium"/>
                                     <segment title="Low"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Priorty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzd-p4-shB">
                                 <rect key="frame" x="22" y="414" width="58" height="24"/>
@@ -360,6 +378,7 @@
                                     <segment title="Medium"/>
                                     <segment title="Low"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP8-t9-fOT">
                                 <rect key="frame" x="28" y="601" width="46" height="24"/>
@@ -376,10 +395,22 @@
                                     <segment title="In Progress"/>
                                     <segment title="Done"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stateBtn:" destination="nv6-vw-YLP" eventType="valueChanged" id="gJs-Hr-2QT"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUI-4N-ZIt">
+                                <rect key="frame" x="156" y="749" width="80" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Edit">
+                                    <color key="baseBackgroundColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addBtn:" destination="Vyf-2Z-MZe" eventType="touchUpInside" id="Uzc-EF-PAI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="URs-Bx-gTj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -393,17 +424,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-Ix-RWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3750" y="-323"/>
+            <point key="canvasLocation" x="3731" y="-323"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Todo-->
         <scene sceneID="lTp-6k-51f">
             <objects>
                 <tabBarController id="d0z-ea-feM" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="uYr-MN-Yo1"/>
+                    <navigationItem key="navigationItem" title="Todo" id="uYr-MN-Yo1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hhQ-rg-Hy7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="selectedImageTintColor" red="0.27541334229999997" green="0.36244713960000002" blue="0.28138730960000002" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.2037544818" green="0.5" blue="0.43023143920000001" alpha="0.95193501660000002" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="rHn-e5-3yX" kind="relationship" relationship="viewControllers" id="wld-WE-bhs"/>
@@ -423,6 +454,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1wO-gN-DRW">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -435,11 +469,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add-task" width="512" height="512"/>
         <image name="figure.australian.football" catalog="system" width="128" height="124"/>
         <image name="figure.run" catalog="system" width="115" height="128"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="h.square.on.square.fill" catalog="system" width="128" height="120"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="to-do-list" width="512" height="512"/>
+        <image name="work-in-progress (2)" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
